@@ -11,13 +11,27 @@ The source code for the app is available via the BSD license. Contributions welc
 
 Note: Significant contributions may require completing a (practically painless) Contributor's License Agreement. 
 
-A subscription version of the app is being made avalable through the AppExchange and automatically updated as improvements are made. 
+A subscription version of the app is being made avalable through the AppExchange and automatically updated as improvements are made. Developers may also install the app from source code directly from this site and avoid the subscription fee. 
 
-Review Modules for the various certification and maintenance exams can be downloaded from this site in CSV format and imported into a subscriber org using the Apex DataLoader or Custom Object Wizard. 
+Review Modules for the various certification and maintenance exams can be downloaded from this site in CSV format, via the Creative Commons Attribution-ShareAlike license, and imported into a subscriber org using the Apex DataLoader or Custom Object Wizard. 
 
-Modules
--------
+See the wiki for a [complete listing of available review modules](https://github.com/ReadySetPrep/force.com/wiki/Review-Modules). 
 
-* [Test Module (Twenty questions using "Lorem Ipsum" text).](https://docs.google.com/open?id=0B77CF0xresWpTy1YTTZXLUJPd0U)
 
-Note that review modules include a hyperlink to the source for each Study Point. Anyone installing the Review Modules is encouraged to review the hyperlink source before importing the module. 
+BSD 2-Clause License 
+--------------------
+
+Copyright (c) 2012, Ted Husted
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Creative Commons Attribution-ShareAlike
+---------------------------------------
+
+See [http://creativecommons.org/licenses/by-sa/3.0/](http://creativecommons.org/licenses/by-sa/3.0/), which is incorporated by reference. 
