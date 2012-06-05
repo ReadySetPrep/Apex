@@ -1,0 +1,39 @@
+<apex:page controller="GuideCtrl" sidebar="false" action="{!doModule}">
+<style>
+.odd { background-color: #ffffff; border-bottom: 1px solid #666666; vertical-align:top; }
+.even { background-color: #F0F0F0; border-bottom: 1px solid #666666; vertical-align:top; } 
+</style>
+<apex:pageMessages ></apex:pageMessages>
+<h1>Review Guide for {!Module} Module</h1>
+<p><em>Select Prep! tab to return.</em></p>
+    <ul>
+        <li>{!Incorrect} Incorrect</li>
+        <li>{!Correct} Correct on first try</li>
+        <li>{!Remaining} Untried or Skipped</li>
+    </ul> 
+    <apex:dataTable value="{!Rows}" var="row" id="guide" rowClasses="odd,even" styleClass="tableClass" cellpadding="2" width="98%">
+            <apex:column >
+                    <apex:facet name="header">Result (Tries)</apex:facet>
+                    <apex:outputText value="{!row.Result}" />
+            </apex:column>
+            <apex:column >
+                    <apex:facet name="header">Objective</apex:facet>
+                    <apex:outputText value="{!row.Point.Objective__c}" />
+            </apex:column>
+            <apex:column >
+                    <apex:facet name="header">Source</apex:facet>
+                    <apex:outputLink value="{!row.Point.Link__c}">{!row.Point.Source__c}</apex:outputLink>
+            </apex:column>
+            <apex:column >
+                    <apex:facet name="header">Exercise</apex:facet>
+                    <apex:outputText value="{!row.Point.Exercise__c}" />
+                    <ul>
+                        <apex:outputText rendered="{!row.Point.Correct1__c}"><li>{!row.Point.Option1__c}</li></apex:outputText>
+                        <apex:outputText rendered="{!row.Point.Correct2__c}"><li>{!row.Point.Option2__c}</li></apex:outputText>
+                        <apex:outputText rendered="{!row.Point.Correct3__c}"><li>{!row.Point.Option3__c}</li></apex:outputText>
+                        <apex:outputText rendered="{!row.Point.Correct4__c}"><li>{!row.Point.Option4__c}</li></apex:outputText>
+                    </ul>
+            </apex:column>
+    </apex:dataTable>
+<p><em>Select Prep! tab to return.</em></p>    
+</apex:page>

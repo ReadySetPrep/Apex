@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Initially, the Point object is populated from an embedded Factory class that generates and stores a sample set of Review Points. Larger sets of Review Points can be imported via the Apex Data Loader.</description>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Correct1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Whether Option1 is a correct choice.</description>
+        <externalId>false</externalId>
+        <label>Correct1</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Correct2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Whether Option2 is correct</description>
+        <externalId>false</externalId>
+        <label>Correct2</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Correct3__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Whether Option3 is correct.</description>
+        <externalId>false</externalId>
+        <label>Correct3</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Correct4__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Whether Option4 is correct.</description>
+        <externalId>false</externalId>
+        <label>Correct4</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Exercise__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Text to present for the multiple-choice format.</description>
+        <externalId>false</externalId>
+        <label>Exercise</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>8</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Link__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Direct hyperlink to the nearest location of the underlying Source materials available to a web browser.</description>
+        <externalId>false</externalId>
+        <label>Link</label>
+        <required>true</required>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Module__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Each point is related to a specific Review Module, indicated by a plain text key, like “X1 - Sales Cloud Consultant”. The initial prefix is designed to help with auto-complete when authoring points in Excel and to simplify creating third party modules. More detail is provided in the Researchers Guide.</description>
+        <externalId>false</externalId>
+        <label>Review Module</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Objective__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Each point is related to a specific Exam Objective, indicated by a plain text key like “Implementation Strategies”. The Exam Objectives are derived from the Study Guides, and documented in the Reseachers Guide.</description>
+        <externalId>false</externalId>
+        <label>Exam Objective</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Option1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Text for an option.</description>
+        <externalId>false</externalId>
+        <label>Option1</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Option2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Text for an option.</description>
+        <externalId>false</externalId>
+        <label>Option2</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Option3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Text for an option.</description>
+        <externalId>false</externalId>
+        <label>Option3</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Option4__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Text for an option.</description>
+        <externalId>false</externalId>
+        <label>Option4</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Each point is derived from a Authoritative Resource that is available as a publicly accessible web document.</description>
+        <externalId>false</externalId>
+        <label>Authoritative Resource</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Version__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The earliest known Salesforce version number where the functionality underlying the review point was available.</description>
+        <externalId>false</externalId>
+        <label>Version</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Point</label>
+    <nameField>
+        <displayFormat>RP-{0000}</displayFormat>
+        <label>Point Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Points</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

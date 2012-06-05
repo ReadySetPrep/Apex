@@ -1,0 +1,54 @@
+<apex:page controller="MainCtrl" sidebar="false">
+    <apex:form >
+        <apex:pageBlock title="Ready Set Prep!" >
+            <apex:pageMessages ></apex:pageMessages>
+            <p>
+            <em>Ready Set Prep!</em>&trade; is an exam preparation app that uses its own study points to identify weak knowledge areas and provide a targeted learning plan for review and improvement.
+            All study points covered by <em>Ready Set Prep!</em> are linked to authoritative materials published by Salesforce.com, such as How to be <em>Successful in Salesforce</em>, <em>Salesforce Fundamentals</em>, and <em>Salesforce Online Help</em>. Review materials used by the app follow the official exam study guides and are obtained entirely from free and publicly-available resources. RSP study points are *not* based on actual exam questions or other non-public proprietary sources.
+            </p>
+            <br />        
+                <apex:pageBlockSection title="Your current review session (Select to resume)">   
+                <apex:selectRadio value="{!Pending}" layout="pageDirection">
+                    <apex:selectOptions value="{!PendingItem}"/>
+                </apex:selectRadio>
+                <br />
+                <apex:commandButton value="Resume Session" action="{!doPending}" />
+                <apex:commandButton value="View Guide" action="{!doGuidePending}" />
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Available review modules (Select one to start)">
+                <apex:selectRadio value="{!Module}" layout="pageDirection">
+                    <apex:selectOptions value="{!ModuleItems}"/>
+                </apex:selectRadio>
+                <br />
+                <apex:commandButton value="Start or Resume Session" action="{!doModule}" />
+            </apex:pageBlockSection>
+         
+            <apex:pageBlockSection title="Your prior sessions (Select one to view)">
+                <apex:selectRadio value="{!Prior}" layout="pageDirection">
+                    <apex:selectOptions value="{!PriorItems}"/>
+                </apex:selectRadio>
+                <br />
+                <apex:commandButton value="View Guide" action="{!doGuide}" />
+                <apex:commandButton value="Start over (clear score)" action="{!doVerify}" />                
+            </apex:pageBlockSection>
+                                               
+        </apex:pageBlock>
+    </apex:form>
+    
+    <apex:toolbar id="quicklinks">
+        <apex:outputText value="Quick Links"/>
+        <apex:toolbarGroup itemSeparator="line" id="toobarGroupLinks">
+            <apex:outputLink target="#top" value="http://certification.salesforce.com/">
+              Salesforce Certification
+            </apex:outputLink>
+            <apex:outputLink target="#top" value="http://ovalisgroup.com/">
+             Ovalis Group 
+            </apex:outputLink>
+            <apex:outputLink target="#top" value="https://github.com/ReadySetPrep">
+             ReadySetPrep!
+            </apex:outputLink> 
+        </apex:toolbarGroup>
+   </apex:toolbar>
+        
+</apex:page>

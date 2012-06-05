@@ -1,0 +1,34 @@
+<apex:page controller="ExerciseCtrl" sidebar="false" action="{!doNext}">
+        <apex:pageMessages ></apex:pageMessages>
+        <apex:pageBlock title="Ready Set Prep!" >
+            <apex:pageBlockSection >           
+                <apex:form >
+                    <apex:outputPanel id="exercise">
+                        <p>{!Progress}</p>
+                        <p><em>{!Objective}</em></p>
+                        <p><strong>{!Exercise}</strong></p>
+                        <br />
+                        <apex:selectCheckboxes value="{!Selections}" layout="pageDirection">
+                            <apex:selectOptions value="{!Options}"/>
+                        </apex:selectCheckboxes>
+                        <br />
+                        <apex:commandButton value="{!SelectionLabel}" action="{!doSelect}" rerender="exercise, option" status="optionStatus" disabled="{!Done}" /> 
+                    </apex:outputPanel>
+                    <apex:outputPanel id="option"> 
+                        <apex:actionstatus id="optionStatus" startText=" ...">    
+                            <apex:facet name="stop">    
+                            <apex:outputPanel id="items" rendered="{!PostBack}">                            
+                                    <apex:dataList value="{!Selections}" var="c">{!c}</apex:dataList>
+                                <p>{!Outcome}</p>  
+                                <br />                          
+                                <apex:commandButton value="{!NextLabel}" action="{!doNext}" rerender="exercise, option" status="exerciseStatus" />
+                            </apex:outputPanel>
+                            </apex:facet>
+                        </apex:actionstatus>
+                        <apex:actionStatus id="exerciseStatus" startText=" ..."></apex:actionStatus>
+                    </apex:outputPanel>
+                </apex:form>
+            </apex:pageBlockSection>            
+        </apex:pageBlock>
+<p><em>Select Prep! tab to return.</em></p>
+</apex:page>

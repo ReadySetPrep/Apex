@@ -1,0 +1,19 @@
+<apex:page controller="VerifyCtrl" sidebar="false" action="{!doVerifyCtrl}">
+    <apex:form >
+        <apex:pageMessages ></apex:pageMessages>
+        <apex:pageBlock title="Please Verify" >
+            <apex:pageBlockSection title="Clear Scores">
+                <p>
+                Do you want to clear your scores for <em>{!Module}</em> and start over?
+                </p>
+                <p>
+                You completed <strong>{!Completed}</strong> Study Points, with <strong>{!Remaining}</strong> Remaining. 
+                </p>
+                <p>
+                <apex:commandButton value="Cancel" action="{!doMain}" />
+                <apex:commandButton value="Yes, clear my scores so I can start over" action="{!doClearScore}" />
+                </p>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
