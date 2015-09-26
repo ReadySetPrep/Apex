@@ -1,7 +1,7 @@
 Welcome to ReadySetPrep!
 ========================
 
-ReadySetPrep!™ is an exam preparation app that uses its own study points to identify weak knowledge areas and provide a targeted learning plan for review and improvement.
+ReadySetPrep!™ for Force.com is an exam preparation app that uses its own study points to identify weak knowledge areas and provide a targeted learning plan for review and improvement.
 
 This repository contains all code for the managed package. 
 
